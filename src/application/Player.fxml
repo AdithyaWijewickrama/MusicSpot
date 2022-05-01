@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="player" prefHeight="87.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlayerController">
+	<children>
+		<Slider fx:id="songLine" layoutX="91.0" layoutY="65.0" onMouseReleased="#jump" prefHeight="14.0" prefWidth="727.0" />
+		<Label fx:id="songNameLabel" layoutX="172.0" layoutY="7.0" prefHeight="34.0" prefWidth="344.0" text="Song">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<Button fx:id="prevBtn" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#prevSong" prefHeight="45.0" prefWidth="45.0" />
+		<Button fx:id="playBtn" layoutX="69.0" layoutY="9.0" mnemonicParsing="false" onAction="#play" prefHeight="45.0" prefWidth="45.0" />
+		<Button fx:id="nextBtn" layoutX="121.0" layoutY="9.0" mnemonicParsing="false" onAction="#nextSong" prefHeight="45.0" prefWidth="45.0" />
+		<Label fx:id="artistLabel" layoutX="172.0" layoutY="45.0" prefHeight="19.0" prefWidth="344.0" text="Artist">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="timeLabel1" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="63.0" prefHeight="19.0" prefWidth="70.0" text="00:00:00" textAlignment="RIGHT">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="timeLabel2" layoutX="830.0" layoutY="63.0" prefHeight="19.0" prefWidth="56.0" text="00:00:00" textAlignment="RIGHT">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<Slider fx:id="soundAdj" layoutX="753.0" layoutY="17.0" prefHeight="14.0" prefWidth="133.0" value="100.0" />
+		<HBox layoutX="634.0" layoutY="10.0" prefHeight="28.0" prefWidth="113.0" spacing="5.0">
+			<children>
+				<Button fx:id="favoriteBtn" mnemonicParsing="false" onAction="#like" prefHeight="25.0" prefWidth="25.0" />
+				<Button fx:id="likeBtn" mnemonicParsing="false" onAction="#dislike" prefHeight="25.0" prefWidth="25.0" />
+				<Button fx:id="dislikeBtn" mnemonicParsing="false" onAction="#favorite" prefHeight="25.0" prefWidth="25.0" />
+				<Button fx:id="volumeBtn" mnemonicParsing="false" onAction="#mute" prefHeight="25.0" prefWidth="25.0" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</HBox>
+      <TextField fx:id="test" layoutX="558.0" layoutY="3.0" onAction="#test" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="test1" layoutX="558.0" layoutY="30.0" onAction="#test1" prefHeight="28.0" prefWidth="70.0" />
+	</children>
+</AnchorPane>

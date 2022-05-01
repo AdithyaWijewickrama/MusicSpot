@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.SignInController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="29.0" prefHeight="17.0" prefWidth="420.0" text="Music Spot" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="136.0" prefHeight="17.0" prefWidth="420.0" text="User name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTxt" alignment="CENTER" layoutX="15.0" layoutY="160.0" onKeyReleased="#usernameValidness" prefHeight="25.0" prefWidth="420.0" promptText="Ex: John Smith">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="215.0" prefHeight="26.0" prefWidth="420.0" text="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordTxt" alignment="CENTER" layoutX="15.0" layoutY="243.0" onKeyReleased="#passwordProgress" prefHeight="25.0" prefWidth="420.0" promptText="Ex: John@1999">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="cancelBtn" layoutX="182.0" layoutY="446.0" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="94.0" text="Cancel">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="signInBtn" disable="true" layoutX="136.0" layoutY="398.0" mnemonicParsing="false" onAction="#signIn" prefHeight="35.0" prefWidth="186.0" text="Sign In">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="67.0" prefHeight="17.0" prefWidth="420.0" text="Sing In" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="312.0" prefHeight="17.0" prefWidth="420.0" text="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTxt" alignment="CENTER" layoutX="15.0" layoutY="336.0" onKeyReleased="#emailValidness" prefHeight="25.0" prefWidth="420.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="usernameValidness" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="15.0" layoutY="190.0" prefHeight="15.0" prefWidth="420.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="passwordProg" layoutX="15.0" layoutY="281.0" prefHeight="9.0" prefWidth="420.0" progress="0.0" />
+      <Label fx:id="emailValidness" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="15.0" layoutY="366.0" prefHeight="15.0" prefWidth="420.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordValidness" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="15.0" layoutY="286.0" prefHeight="15.0" prefWidth="420.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
